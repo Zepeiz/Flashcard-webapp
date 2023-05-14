@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% set active_page = 'allcards_page'%}
+{% block title %}
+All Cards
+{% endblock %} 
+{% block content %}
+<br>
+<h1 class="text-center">All user flashcards</h1>
+
+<table class="table table-hover table-dark">
+   <thead>
+      <tr>
+         <!-- Colums -->
+         <th scope="col" style="font-weight: bold; font-size:x-large; text-align: center" class="col-2">Key Phrase</th>
+         <th scope="col" style="font-weight: bold; font-size:x-large; text-align:center" class="col-8" >Definition</th>
+         <th scope="col" style="font-weight: bold; font-size:x-large; text-align: center" >Owner</th>
+      </tr>
+   </thead> 
+   <tbody>
+      <!-- Rows -->
+      {% for flashcard in flashcards %}
+      <tr>
+         <td>{{flashcard.key_phrase}}</td>
+         <td style="text-align: center;">{{flashcard.definition}}</td>
+         <td style="text-align: center;">{{flashcard.owner.username}}</td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+  
+
+   
+</div>
+{% endblock %}

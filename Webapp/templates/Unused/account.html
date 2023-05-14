@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+Multiple Choice Quiz
+{% endblock %} 
+
+{% block content %}
+<h1>This is the about page of: {{username}}</h1>
+
+<a href="{{ url_for('home_page') }}"><button>Back to Menu</button></a>
+{% endblock %}
+ 

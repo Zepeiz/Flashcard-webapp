@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% set active_page = 'test_page'%}
+{% block title %}
+Test Page
+{% endblock %} 
+
+{% block content %}
+<h1 class="text-center">All Users in database</h1>
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Colums -->
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows -->
+        {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email_address}}</td>
+                <td>{{user.password_hash}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1 class="text-center">All flashcards in database</h1>
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Colums -->
+            <th scope="col">ID</th>
+            <th scope="col">Key Phrase</th>
+            <th scope="col">Definition</th>
+            <th scope="col">User ID</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows -->
+        {% for flashcard in flashcards %}
+            <tr>
+                <td>{{flashcard.flashcard_id}}</td>
+                <td>{{flashcard.key_phrase}}</td>
+                <td>{{flashcard.definition}}</td>
+                <td>{{flashcard.user_id}}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

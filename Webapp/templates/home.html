@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% set active_page = 'home_page' %}
+{% block title %}
+Home Page
+{% endblock %} 
+
+{% block content %}
+<body class="text-center">
+  <br>
+  <h1>Home Page</h1>
+  <p>
+    <br>
+    <h2>Welcome to the OIS Computer Science Club Web Application!</h2>
+    <h2>Get started with creating your own flashcard library by creating an account!</h2>
+    <h2>You can also view flashcards made by others by clicking on all flashcards!</h2>
+  </p>
+  <br>
+  <div class="container" style="width: 400px;">
+      <a type="button" class=" btn btn-lg btn-block btn-primary" href="{{ url_for('quiz_page')}}">Create Flash Cards</a>
+      <a type="button" class=" btn btn-lg btn-block btn-primary" href="{{ url_for('flashcards_page')}}">View My Flash Cards</a>
+      <a type="button" class=" btn btn-lg btn-block btn-primary" href="{{ url_for('allcards_page')}}">View All Flash Cards</a>
+      <br>
+      
+      <br>  
+    </div>
+</body>
+{% endblock %} 
+

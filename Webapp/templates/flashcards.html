@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% set active_page = 'flashcards_page'%}
+{% block title %}
+My flashcards
+{% endblock %} 
+{% block content %}
+<br>
+<h1 class="text-center">My flashcards</h1>
+      <table class="table table-hover table-dark">
+         <thead>
+            <tr>
+               <!-- Colums -->
+               <th scope="col" style="font-weight: bold; font-size:x-large; text-align: center">Key Phrase</th>
+               <th scope="col" style="font-weight: bold; font-size:x-large; text-align: center">Definition</th>
+               <th scope="col" style="font-weight: bold; font-size:x-large; text-align: center">Delete</th>
+            </tr>
+         </thead>
+         <tbody>
+            <!-- Rows -->
+            {% for flashcard in flashcards %}
+            <tr style="text-align: center;">
+               <td>{{flashcard.key_phrase}}</td>
+               <td>{{flashcard.definition}}</td>
+
+               <td><a class="btn btn-sm btn-outline-danger mr-auto" href="/delete/{{flashcard.flashcard_id}}">Delete flashcard</a></td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+         
+</div>
+{% endblock %}

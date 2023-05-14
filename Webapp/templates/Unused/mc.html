@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+Multiple Choice Quiz
+{% endblock %} 
+
+{% block content %}
+<h1>Multiple Choice questions</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+        {% for i in q %}
+            <li>Where is <u>{{i}}</u> located?</li>
+            {% for j in o[i] %}
+                <input type='radio' value='{{j}}' name='{{i}}' />{{j}}
+            {% endfor %}
+        {% endfor %}
+    </ol>
+    <input type="submit" value="Submit Answer">
+</form>
+<a href="{{ url_for('home_page') }}"><button>Back to Menu</button></a>
+{% endblock %}

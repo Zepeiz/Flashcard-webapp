@@ -1,0 +1,7 @@
+__pycache__
+env
+instance
+.env
+copy.txt
+database.db
+.DS_Store

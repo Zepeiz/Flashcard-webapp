@@ -1,0 +1,39 @@
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Colums -->
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Barcode</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows -->
+        {% for item in items %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.barcode}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+f"<h1>This is the about page of {username}</h1>"
+
+def shuffle(d):
+  i = 0
+  temp = []
+  while i < len(d):
+    q = random.choice(list(d.items()))
+    if q in temp:
+      pass
+      temp.append(q)
+    
+    return q
+i = 0
+while i < len(questions_copy.items()):
+  print(shuffle(questions_copy))
+  i += 1
