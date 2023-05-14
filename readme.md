@@ -1,5 +1,5 @@
 # Flashcard web application built with python flask, SQLAlchemy, and SQLite
-
+A school project made in 2021.
 ## Installation:
 ### Windows: 
 pip install virtualenv <br />
